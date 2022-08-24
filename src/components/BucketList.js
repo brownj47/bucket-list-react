@@ -15,7 +15,11 @@ function BucketList() {
   const completeBucketItem = (id) => {
     // If the ID passed to this function matches the ID of the item that was clicked, mark it as complete
     let updatedBucket = bucket.map((item) => {
-      
+      if (id === item.id){
+        item.complete = true;
+        return item;
+      };
+      return item.complete = false;
       // TODO: Write logic that marks an item as complete or incomplete when invoked
 
     });
